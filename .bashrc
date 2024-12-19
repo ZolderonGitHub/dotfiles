@@ -18,18 +18,15 @@ fi
 
 # Shell Prompt
 # PS1='\[\033[34m\]\w\[\033[m\] >\[\e[0m\] '
-PS1="\[\e[34m\]\w\[\e[m\] \[\e[31m\]>\[\e[m\] "
+PS1="\[\e[34m\]\w\[\e[m\] \[\e[31m\]λ\[\e[m\] "
 
 # Commands
 shopt -s autocd
 set -o vi
 
 # Aliases
-alias sudo='doas'
 alias cls='clear'
-alias firefox='firefox-bin'
-alias vi='nvim'
-alias vim='nvim'
+alias update='sudo pacman -Syu'
 
-neofetch
+fastfetch
 

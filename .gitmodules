@@ -1,3 +1,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/ZolderonGithub/vim-simple
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/ZolderonGitHub/vim-simple
