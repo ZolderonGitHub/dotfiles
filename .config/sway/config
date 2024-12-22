@@ -16,7 +16,9 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # Your preferred application launcher
-set $menu wofi --show run
+set $menu wofi --show drun --allow-images
+
+set $kill_sway sway exit
 
 # Gruvbox Colors
 set $bg #282828
@@ -92,15 +94,18 @@ output * bg ~/Pictures/moebius.png fill
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+z kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+space exec $menu
+
+    # Kill sway
+    bindsym $mod+x exec $kill_sway
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
+    # Change $normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
 
@@ -181,7 +186,7 @@ output * bg ~/Pictures/moebius.png fill
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+d focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -267,5 +272,16 @@ client.focused_inactive $bg2            $bg2            $fg4
 client.unfocused        $darkgray       $darkgray       $fg4 
 client.urgent           $purple         $purple         $fg  
 title_align center
+
+#
+#No titlebars
+#
+default_border none
+for_window [title="^.*"] title_format ""
+default_border normal 0
+default_floating_border normal 0
+font pango:monospace 1
+titlebar_border_thickness 0
+titlebar_padding 0
 
 include /etc/sway/config.d/*
