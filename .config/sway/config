@@ -267,25 +267,38 @@ bar {
     swaybar_command waybar
 }
 
-client.focused          $bg2            $bg2            $fg     
-client.focused_inactive $bg2            $bg2            $fg4    
-client.unfocused        $darkgray       $darkgray       $fg4 
-client.urgent           $purple         $purple         $fg  
+client.focused          $bg2            $bg2            $fg     $bg2
+client.focused_inactive $bg2            $bg2            $fg4    $bg2
+client.unfocused        $darkgray       $darkgray       $fg4    $darkgray
+client.urgent           $purple         $purple         $fg     $purple
 title_align center
 
-#
-#No titlebars
-#
-default_border none
-for_window [title="^.*"] title_format ""
-default_border normal 0
-default_floating_border normal 0
-font pango:monospace 1
-titlebar_border_thickness 0
-titlebar_padding 0
+default_border pixel 3
+default_floating_border pixel 3
 
 # Notifications
 exec swaync
 bindsym $mod+Shift+n exec swaync-client -t -sw
+exec nm-applet --indicator
+
+# Idle config
+exec swayidle -w \
+         timeout 300 'swaylock -f -i ~/Pictures/moebius.png' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -i ~/Pictures/moebius.png'
+
+# Swayfx
+# Shadows
+shadows on
+shadow_blur_radius 20
+shadow_color #000000BB
+shadow_inactive_color #0000000B
+shadow_offset 0 0
+
+# other effects
+blur enable
+default_dim_inactive 0.2
+corner_radius 14
+layer_effects "wofi" shadows enable; blur enable 
 
 include /etc/sway/config.d/*

@@ -6,6 +6,7 @@
     "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
+    "margin-top": -10,
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
@@ -127,7 +128,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
+        "format": "{icon}  {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -136,7 +137,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
+        "format": "{icon}  {capacity}%",
         "format-full": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
@@ -147,8 +148,8 @@
     },
     "wireplumber": {
         "scroll-step": 5, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}% ",
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}% ",
         "format-bluetooth-muted": " {icon}",
         "format-muted": "",
         "format-icons": {
