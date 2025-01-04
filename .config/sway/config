@@ -281,6 +281,9 @@ exec swaync
 bindsym $mod+Shift+n exec swaync-client -t -sw
 exec nm-applet --indicator
 
+# Autotiling
+exec_always --no-startup-id autotiling-rs &
+
 # Idle config
 exec swayidle -w \
          timeout 300 'swaylock -f -i ~/Pictures/moebius.png' \
@@ -298,7 +301,6 @@ shadow_offset 0 0
 # other effects
 blur enable
 default_dim_inactive 0.2
-corner_radius 14
 layer_effects "wofi" shadows enable; blur enable 
 
 include /etc/sway/config.d/*

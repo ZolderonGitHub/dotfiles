@@ -9,6 +9,7 @@
     "margin-top": -10,
     // Choose the order of the modules
     "modules-left": [
+        "niri/workspaces",
         "sway/workspaces",
         "cava",
         "sway/mode",
@@ -16,17 +17,26 @@
         "sway/mpd"
     ],
     "modules-center": [
-        "sway/window"
+        "wlr/taskbar",
+        "sway/window",
     ],
     "modules-right": [
         "mpris",
-        "load",
         "wireplumber",
         "backlight",
         "clock",
         "battery",
         "tray"
     ],
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            // Icons by state
+            "active": " ",
+            "focused": " ",
+            "default": " "
+        },
+    },
     // Modules configuration
     "sway/workspaces": {
         "all-outputs": true,
@@ -81,7 +91,7 @@
 		"stopped": ""
 	},
 	"dynamic-order": ["title", "artist"],
-	"ignored-players": ["firefox"]
+	// "ignored-players": ["firefox"]
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -219,6 +229,6 @@
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
-    }
+    },
 }]
 
