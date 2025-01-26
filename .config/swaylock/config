@@ -1,0 +1,13 @@
+ignore-empty-password
+indicator
+indicator-caps-lock
+image=~/Pictures/moebius.png
+font="Iosevka Nerd Font"
+clock
+timestr=%R
+datestr=%a, %e of %B
+
+
+effect-blur=7x5
+indicator-radius = 200
+indicator-thickness = 20

@@ -1,8 +1,9 @@
 set fish_greeting
 
-abbr -a update "sudo pacman -Syu"
+abbr -a update "paru -Syu"
 abbr -a cls "clear"
 abbr -a odin "~/programs/odin/odin"
+abbr -a v "nvim"
 
 function fish_prompt
     echo (set_color blue)(prompt_pwd) (set_color red)'λ '
