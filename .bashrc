@@ -26,7 +26,8 @@ set -o vi
 
 # Aliases
 alias cls='clear'
-alias update='sudo pacman -Syu'
+
+export PATH="$HOME/.local/bin:$PATH"
 
 fastfetch
 
