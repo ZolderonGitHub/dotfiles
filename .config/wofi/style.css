@@ -1,26 +1,49 @@
+/* ======================================================== */
+/* Gruvbox Dark (Hard) colors */
+/* ======================================================== */
+@define-color bg        #1d2021;
+@define-color faint     #282828;
+@define-color fg        #ebdbb2;
+@define-color muted     #928374;
+
+@define-color red       #cc241d;
+@define-color orange    #d65d0e;
+@define-color yellow    #d79921;
+@define-color green     #98971a;
+@define-color aqua      #689d6a;
+@define-color blue      #458588;
+@define-color purple    #b16286;
+
+@define-color bright_red    #fb4934;
+@define-color bright_green  #b8bb26;
+@define-color bright_yellow #fabd2f;
+@define-color bright_aqua   #8ec07c;
+@define-color bright_blue   #83a598;
+@define-color bright_purple #d3869b;
+
 window {
 margin: 0px;
-border: 1px solid #928374;
-background-color: #282828;
+border: 1px solid @muted;
+background-color: @bg;
 }
 
 #input {
 margin: 5px;
 border: none;
-color: #ebdbb2;
-background-color: #1d2021;
+color: @fg;
+background-color: @bg;
 }
 
 #inner-box {
 margin: 5px;
 border: none;
-background-color: #282828;
+background-color: @bg;
 }
 
 #outer-box {
 margin: 5px;
 border: none;
-background-color: #282828;
+background-color: @bg;
 }
 
 #scroll {
@@ -31,10 +54,10 @@ border: none;
 #text {
 margin: 5px;
 border: none;
-color: #ebdbb2;
+color: @fg;
 }
 
 #entry:selected {
-background-color: #1d2021;
+background-color: @faint;
 }
 

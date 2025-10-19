@@ -1,1 +1,5 @@
+term=kitty
+width=750
+lines=10
 allow_images=true
+hide_scroll=true

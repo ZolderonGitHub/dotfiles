@@ -7,13 +7,15 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "sway/workspaces"
     ],
     "modules-center": [
-        "hyprland/window"
+        // "hyprland/window",
+        // "sway/scratchpad"
+        "mpd",
     ],
     "modules-right": [
-        "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "network",
@@ -173,7 +175,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon}  {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
