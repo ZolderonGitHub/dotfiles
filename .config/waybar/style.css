@@ -205,6 +205,9 @@ window#waybar.hidden {
 #workspaces button:hover {
   background: @bright_green;
 }
+
+#workspaces button.visible,
+#workspaces button.visible:hover,
 #workspaces button.active {
   background: @green;
   color: @bg;
